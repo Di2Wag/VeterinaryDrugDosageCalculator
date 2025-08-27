@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Di2Wag">
+    <title>Vet Drug Dosage Calculator</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>VETERINARY DRUGS DOSAGE CALCULATOR</h1>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="drug-selection">
+                <label for="drug-search">Search the Drug name:</label>
+                <input type="text" id="drug-search" list="drug-list" placeholder="drug name">
+                <datalist id="drug-list"></datalist>
+            </div>
+            <div class="formulation-selection" id="formulation">
+                <label for="formulation-select">Select Formulation:</label>
+                <select id="formulation-select"></select>
+            </div>
+            <div class="species-selection">
+                <label>Select Species:</label>
+                <div class="species-group">
+                    <input type="radio" id="species-dog" name="species" value="dog" checked>
+                    <label for="species-dog">Dog</label>
+                    <input type="radio" id="species-cat" name="species" value="cat">
+                    <label for="species-cat">Cat</label>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Results Section -->
+        <div class="results-section">
+            <h2>Result</h2>
+            <div id="calculated-dosage">
+                <!-- Dosage result will appear here -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
