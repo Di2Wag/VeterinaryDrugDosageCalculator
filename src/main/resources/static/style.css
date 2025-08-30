@@ -1,0 +1,155 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Add a background image */
+    background-image: url('images/pills4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Fallback color in case the image fails to load */
+    background-color: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.title-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-image:
+    url('images/puppy.png'),
+    url('images/kitten.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: background-animation 5s infinite;
+}
+
+@keyframes background-animation {
+    0%, 100%{
+        background-image: url('images/puppy.png');
+    }
+    50%{
+        background-image: url('images/kitten.jpg');
+    }
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 2rem;
+}
+
+.search-section, .results-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.drug-selection, .formulation-selection, .species-selection, .weight-input {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+.species-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.species-group input[type="radio"] {
+    display: none;
+}
+
+.species-group label {
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    transition: all 0.2s;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.species-group input[type="radio"]:checked + label {
+    background-color: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+}
+
+.calculate-button {
+    background-color: #6366f1;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calculate-button:hover {
+    background-color: #4f46e5;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#calculated-dosage {
+    background-color: #e5e7eb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    color: #374151;
+    text-align: center;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
